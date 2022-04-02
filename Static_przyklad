@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Statics
+{
+    class Enemy
+    {
+        public static int totalHP = 0;
+        public int Hp;
+        public string Name;
+
+        public Enemy(int hp, string name)
+        {
+            Hp = hp;
+            Name = name;
+            totalHP += hp;
+        }
+
+        public void TakeDamage(int damage)
+        {
+            Hp -= damage;
+            totalHP -= damage;
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Enemy enemy1 = new Enemy(100, "example_enemy");
+            Enemy enemy2 = new Enemy(100, "example_enemy");
+            Enemy enemy3 = new Enemy(100, "example_enemy");
+            Enemy enemy4 = new Enemy(100, "example_enemy");
+            Enemy enemy5 = new Enemy(100, "example_enemy");
+
+            Console.WriteLine("Pula hp przeciwników: " + Enemy.totalHP.ToString());
+
+            Console.ReadKey();
+        }
+    }
+}
