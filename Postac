@@ -1,0 +1,23 @@
+    class Postac
+    {
+        public string NazwaPostaci;
+        public int Hp;
+        public int AtakPodstawowy;
+
+        public Postac(string nazwa, int hp, int atak)
+        {
+            NazwaPostaci = nazwa;
+            Hp = hp;
+            AtakPodstawowy = atak;
+        }
+
+        public void PrzyjmijObrazenia(int obrazenia)
+        {
+
+        }
+
+        public void WyswietlStatystyki()
+        {
+            Console.WriteLine($"Postac {NazwaPostaci} posiada {Hp} zycia i {AtakPodstawowy} pkt ataku.\n");
+        }
+    }
