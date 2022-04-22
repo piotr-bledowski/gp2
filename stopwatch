@@ -1,0 +1,18 @@
+            Stopwatch stoper = new Stopwatch();
+            stoper.Start();
+            int n = 200000000;
+            /*            int[] tablica = new int[n];
+                        for (int i = 0; i < n; i++)
+                        {
+                            tablica[i] = i * i;
+                        }*/
+            List<int> lista = new List<int>();
+            for (int i = 0; i < n; i++)
+            {
+                lista.Add(i);
+                lista[i] *= 2;
+                lista[i]++;
+            }
+            stoper.Stop();
+            Console.WriteLine($"Program wykonal sie w: {stoper.ElapsedMilliseconds}ms");
+            Console.ReadKey();
